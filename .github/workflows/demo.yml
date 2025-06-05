@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: My first action
 
 # Controls when the workflow will run
 on:
@@ -22,3 +22,28 @@ jobs:
         run: |
           echo Add other actions to build,
           date
+      - name: Send Email via 163 SMTP
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.163.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_AUTH_CODE }}
+          subject: GitHub Actions Notification - ${{ github.event.repository.name }}
+          to: iwifi100@163.com
+          from: Your Name <${{ secrets.EMAIL_USERNAME }}>
+          body: |
+            Hello,
+            The GitHub Actions workflow for ${{ github.repository }} has completed successfully.
+            Commit: ${{ github.sha }}
+            Triggered by: ${{ github.actor }}
+            Time: ${{ github.event.head_commit.committed_date }}
+          html_body: |
+            <h1>Workflow Notification</h1>
+            <p>The GitHub Actions workflow for <b>${{ github.repository }}</b> has completed successfully.</p>
+            <ul>
+              <li><strong>Commit</strong>: ${{ github.sha }}</li>
+              <li><strong>Triggered by</strong>: ${{ github.actor }}</li>
+              <li><strong>Time</strong>: ${{ github.event.head_commit.committed_date }}</li>
+            </ul>

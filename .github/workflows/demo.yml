@@ -31,7 +31,7 @@ jobs:
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_AUTH_CODE }}
           subject: GitHub Actions Notification - ${{ github.event.repository.name }}
-          to: iwifi100@163.com
+          to: anonytravel666@163.com
           from: Your Name <${{ secrets.EMAIL_USERNAME }}>
           body: |
             Hello,

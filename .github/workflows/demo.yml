@@ -5,7 +5,7 @@ name: My first action
 # Controls when the workflow will run
 on:
   schedule:
-    - cron: '0 1 * * *'  # 每天 UTC 01:00（即 UTC+8 的 09:00）
+    - cron: '0,30 * * * *' # 每小时的 00 分和 30 分触发
  
   # Triggers the workflow on push or pull request events but only for the "main" branch
   # Allows you to run this workflow manually from the Actions tab

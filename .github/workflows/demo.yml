@@ -47,6 +47,7 @@ jobs:
             Time: ${{ github.event.head_commit.committed_date }}
           html_body: |
             <h1>Workflow Notification</h1>
+            <p>Hello,</p>
             <p>The GitHub Actions workflow for <b>${{ github.repository }}</b> has completed successfully.</p>
             <ul>
               <li><strong>Commit</strong>: ${{ github.sha }}</li>

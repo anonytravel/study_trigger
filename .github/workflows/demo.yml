@@ -47,6 +47,7 @@ jobs:
             <p>Hello,</p>
             <p>The GitHub Actions workflow for <b>${{ github.repository }}</b> has completed successfully.</p>
             <ul>
+              <li>Event: ${{ github.event_name }}</li>
               <li><strong>Commit</strong>: ${{ github.sha }}</li>
               <li><strong>Triggered by</strong>: ${{ github.actor }}</li>
               <li><strong>Time</strong>: ${{ steps.time.outputs.TRIGGER_TIME }}</li>

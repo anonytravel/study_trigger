@@ -5,7 +5,7 @@ name: SendEmailOnSchedule
 # Controls when the workflow will run
 on:
   schedule:
-    - cron: '0,30 0-15,16-23 * * *' # 每小时的 00 分和 30 分触发
+    - cron: '0,30 * * * *' # CST 全天每小时 00 分和 30 分
  
   # Triggers the workflow on push or pull request events but only for the "main" branch
   # Allows you to run this workflow manually from the Actions tab

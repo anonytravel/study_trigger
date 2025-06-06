@@ -45,5 +45,5 @@ jobs:
             <ul>
               <li><strong>Commit</strong>: ${{ github.sha }}</li>
               <li><strong>Triggered by</strong>: ${{ github.actor }}</li>
-              <li><strong>Time</strong>: ${{ github.event.head_commit.committed_date }}</li>
+              <li><strong>Time</strong>: ${{ date }}</li>
             </ul>

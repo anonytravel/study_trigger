@@ -39,7 +39,7 @@ jobs:
           secure: true
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_AUTH_CODE }}
-          subject: GitHub Actions Notification - ${{ github.event.repository.name }}
+          subject: GitHub Actions Notification - ${{ github.event.repository.name }}－trigged by [${{ github.event_name }}]
           to: anonytravel666@163.com
           from: Your Name <${{ secrets.EMAIL_USERNAME }}>
           html_body: |

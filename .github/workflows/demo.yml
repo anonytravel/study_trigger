@@ -59,4 +59,4 @@ jobs:
         - name: Run multi line script
           run: |
             echo Hello Github Actions
-            echo %date% %time%
+            echo %date% %time% 

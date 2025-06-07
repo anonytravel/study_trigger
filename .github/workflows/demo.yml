@@ -60,6 +60,6 @@ jobs:
       - name: Run a multi-line script
         run: |
             echo Hello Github Actions
-            echo %date% %time% 
+            %date% %time% 
             Get-Date
     

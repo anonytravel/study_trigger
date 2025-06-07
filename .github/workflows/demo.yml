@@ -53,7 +53,7 @@ jobs:
               <li><strong>Triggered by</strong>: ${{ github.actor }}</li>
               <li><strong>Time</strong>: ${{ steps.time.outputs.TRIGGER_TIME }}</li>
             </ul>
-  run_on_windows: 
+  build_on_windows: 
     runs-on: windows-latest
       steps:
         - name: Run multi line script

@@ -31,7 +31,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          date
+          date1
       - name: Send Email via 163 SMTP
         uses: dawidd6/action-send-mail@v3
         with:
@@ -55,6 +55,7 @@ jobs:
             </ul>
   build_on_windows:     
     runs-on: windows-latest
+    needs: build_on_ubuntu  # 确保 run_on_windows 在 build_on_ubuntu 完成后运行
     steps:       
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script

@@ -31,7 +31,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          date1
+          date
       - name: Send Email via 163 SMTP
         uses: dawidd6/action-send-mail@v3
         with:
